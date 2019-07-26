@@ -32,12 +32,12 @@ describe '#Word' do
     end
   end
 
-  # describe('#==') do
-  #   it('will identify as the same word if it has matching attributes') do
-  #     word = Word.new('bubblefy', nil)
-  #     word2 = Word.new('bubblefy', nil)
-  #     expect().to(eq())
-  #   end
-  # end
+  describe('#==') do
+    it('will identify as the same word if it has matching attributes') do
+      word1 = Word.new('bubblefy', nil)
+      word2 = Word.new('bubblefy', nil)
+      expect(word1).to(eq(word2))
+    end
+  end
 
 end

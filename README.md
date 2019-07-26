@@ -21,9 +21,11 @@ _This application is an independent coding project from a Ruby coding class at E
 ## Specs
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
+|creates a new word object with an entered name and a unique id| 'bubblefy' | bubblefy, id: 1|
+|a method that returns an empty array where future words will be stored|Word.all|[]|
+|stores word objects in a hash to mock a database, then can return them in an array|New words entered: 'bubblefy', 'uncyorn', 'flutterby'| ['bubblefy', 'uncyorn', 'flutterby']|
+|will identify the two Word objects as the same if there attributes match| word1 = Word.new('bubblefy', nil) word2 = Word.new('bubblefy', nil) | true |
 ||||
-||||
-
 ## Known Bugs
 
 _No known bugs_

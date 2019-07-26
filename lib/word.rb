@@ -19,9 +19,9 @@ class Word
     @@words[self.id] = Word.new(self.name, self.id)
   end
 
-  # def == (word_to_be_compared)
-  #   self.name() == word_to_be_compared.name()
-  # end
+  def == (word_to_be_compared)
+    self.name() == word_to_be_compared.name()
+  end
 
   def self.clear
     @@albums = {}
