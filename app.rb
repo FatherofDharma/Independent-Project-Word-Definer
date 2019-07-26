@@ -34,13 +34,6 @@ post ('/words') do
   erb(:words)
 end
 
-delete ('/words/:id') do
-  @word = Word.find(params[:id].to_i())
-  @word.delete()
-  @words = Word.sort()
-  erb(:words)
-end
-
 get ('/words/:id/edit') do
   @word = Word.find(params[:id].to_i())
   erb(:edit_word)
@@ -52,3 +45,12 @@ patch ('/words/:id') do
   @words = Word.sort()
   erb(:words)
 end
+
+delete ('/words/:id') do
+  @word = Word.find(params[:id].to_i())
+  @word.delete()
+  @words = Word.sort()
+  erb(:words)
+end
+
+# This section is for paths relating to definitions specifically.
