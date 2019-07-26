@@ -32,4 +32,13 @@ class Word
     @@words[id]
   end
 
+  def edit(name)
+    self.name = name
+    @@words[self.id] = Word.new(self.name, self.id)
+  end
+
+  def delete
+    @@words.delete(self.id)
+  end
+  
 end
