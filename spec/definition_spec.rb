@@ -72,7 +72,7 @@ describe '#Definition' do
   end
 
   describe('#word') do
-    it('finds the word a definition b elongs to') do
+    it('finds the word a definition belongs to') do
       definition1 = Definition.new('makes bubbles out of anything', @word.id, nil)
       definition1.save()
       expect(definition1.word).to(eq(@word))
