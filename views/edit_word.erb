@@ -9,4 +9,10 @@
   <button type="submit">Change the Word</button>
 </form>
 
+<form action="/words/<%= @word.id() %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+
+  <button type="submit">Delete Word!</button>
+</form>
+
 <p><a href="/words">Return to the dictionary!</a></p>
