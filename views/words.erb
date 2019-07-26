@@ -1,0 +1,15 @@
+<h1>Make Your Own Dictionary!</h1>
+
+<h3>Words:</h3>
+
+<% if @words.any? %>
+  <ul>
+    <% @words.each do |word| %>
+      <li><a href="/words/<%= word.id %>"><%= word.name %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+<p>There are no words in the dictionary, so maybe you should add one!</p>
+<% end %>
+
+<a href="/words/new">Add a new word to the dictionary!</a>

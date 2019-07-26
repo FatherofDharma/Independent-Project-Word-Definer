@@ -7,15 +7,24 @@ also_reload('lib/**/*.rb')
 also_reload('app.rb')
 
 get ('/') do
-  @@words = Word.sort
+  @words = Word.sort
   erb(:words)
 end
 
 get ('/words') do
-  @@words = Word.sort
+  @words = Word.sort
   erb(:words)
 end
 
 get ('/words/new') do
   erb(:add_word)
+end
+
+post ('/words') do
+  name = params[:new_word]
+  word = Word.new(name, nil)
+  word.save()
+
+  @words = Word.sort()
+  erb(:words)
 end
