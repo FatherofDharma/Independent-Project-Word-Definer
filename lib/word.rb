@@ -24,8 +24,12 @@ class Word
   end
 
   def self.clear
-    @@albums = {}
+    @@words = {}
     @@total_ids = 0
+  end
+
+  def self.find(id)
+    @@words[id]
   end
 
 end

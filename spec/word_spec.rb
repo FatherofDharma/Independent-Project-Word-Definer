@@ -9,16 +9,12 @@ describe '#Word' do
 
   describe('#Word') do
     it('creates a new word object with an entered name and a unique id') do
-      word = Word.new('bubblefy', nil)
-      expect(word.name).to(eq('bubblefy'))
+      word1 = Word.new('bubblefy', nil)
+      expect(word1.name).to(eq('bubblefy'))
     end
   end
 
-  describe('.all') do
-    it('returns and empty array where future words will be stored') do
-      expect(Word.all).to(eq([]))
-    end
-  end
+
 
   describe('#save') do
     it('store a word object in a hash, mocking a database') do
@@ -37,6 +33,17 @@ describe '#Word' do
       word1 = Word.new('bubblefy', nil)
       word2 = Word.new('bubblefy', nil)
       expect(word1).to(eq(word2))
+    end
+  end
+
+  describe('.find') do
+    it('will locate and return a word based on its id') do
+      word1 = Word.new('bubblefy', nil)
+      word1.save()
+      word2 = Word.new('uncyorn', nil)
+      word2.save()
+      binding.pry
+      expect(Word.find(word1.id)).to(eq(word1))
     end
   end
 
