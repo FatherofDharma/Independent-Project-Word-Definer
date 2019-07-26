@@ -40,5 +40,11 @@ class Word
   def delete
     @@words.delete(self.id)
   end
-  
+
+  def self.sort
+    sorted_words = @@words.sort_by { |id, word| word.name.downcase }
+    @@words = sorted_words.to_h
+    @@words.values
+  end
+
 end

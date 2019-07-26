@@ -73,5 +73,16 @@ describe '#Word' do
     end
   end
 
+  describe('.sort') do
+    it('sorts word objects alphabetically by name') do
+      word1 = Word.new('bubblefy', nil)
+      word1.save()
+      word2 = Word.new('uncyorn', nil)
+      word2.save()
+      word3 = Word.new('flutterby', nil)
+      word3.save()
+      expect(Word.sort).to(eq([word1, word3, word2]))
+    end
+  end
 
 end

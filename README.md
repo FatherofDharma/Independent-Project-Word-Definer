@@ -26,7 +26,7 @@ _This application is an independent coding project from a Ruby coding class at E
 |stores word objects in a hash to mock a database, then can return them in an array|New words entered: 'bubblefy', 'uncyorn', 'flutterby'| ['bubblefy', 'uncyorn', 'flutterby']|
 |identifies two Word objects as the same if there attributes match| word1 = Word.new('bubblefy', nil) word2 = Word.new('bubblefy', nil) | true |
 |deletes a word object by id|word1.delete|[word2, word3] (word1 now removed)|
-||||
+|sorts words alphabetically by name|'bubblefy', 'uncyorn', 'flutterby'|'bubblefy', 'flutterby', 'uncyorn'|
 ||||
 ||||
 ## Known Bugs
