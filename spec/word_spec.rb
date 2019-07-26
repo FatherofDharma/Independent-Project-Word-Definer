@@ -14,7 +14,11 @@ describe '#Word' do
     end
   end
 
-
+  describe('.all') do
+    it('returns and empty array where future words will be stored') do
+      expect(Word.all).to(eq([]))
+    end
+  end
 
   describe('#save') do
     it('store a word object in a hash, mocking a database') do
@@ -42,7 +46,6 @@ describe '#Word' do
       word1.save()
       word2 = Word.new('uncyorn', nil)
       word2.save()
-      binding.pry
       expect(Word.find(word1.id)).to(eq(word1))
     end
   end
