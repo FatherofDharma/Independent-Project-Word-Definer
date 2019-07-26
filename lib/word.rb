@@ -15,8 +15,17 @@ class Word
     @@words.values()
   end
 
+  def save
+    @@words[self.id] = Word.new(self.name, self.id)
+  end
+
   # def == (word_to_be_compared)
   #   self.name() == word_to_be_compared.name()
   # end
+
+  def self.clear
+    @@albums = {}
+    @@total_ids = 0
+  end
 
 end
