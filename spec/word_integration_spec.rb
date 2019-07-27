@@ -13,6 +13,32 @@ describe('create an word path', {:type => :feature}) do
   end
 end
 
+describe('deletes a word', {:type => :feature}) do
+  it('deletes a word') do
+    word = Word.new('lickify', nil)
+    word.save()
+    word2 = Word.new('spellify', nil)
+    word2.save()
+    visit("/words/#{word.id}/edit")
+    click_on('Delete Word!')
+    expect(page).to have_no_content('lickify')
+  end
+end
+
+describe('edits a word', {:type => :feature}) do
+  it('edits a word') do
+    word = Word.new('lickify', nil)
+    word.save()
+    word2 = Word.new('spellify', nil)
+    word2.save()
+    visit("/words/#{word.id}/edit")
+    fill_in('name', :with => "salivafy")
+    click_on('Change the Word')
+    expect(page).to have_content('salivafy')
+    expect(page).to have_no_content('lickify')
+  end
+end
+
 describe('create an definition path', {:type => :feature}) do
   it('creates an word and then goes to the word page') do
     word = Word.new('lickify', nil)
