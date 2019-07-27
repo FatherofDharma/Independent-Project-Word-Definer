@@ -1,8 +1,6 @@
 <h1><%= @word.name %></h1>
 
 <h4>Definition(s)</h4>
-
-
 <% if @word.definitions %>
     <ul>
       <% @word.definitions.each do |definition| %>
@@ -18,9 +16,9 @@
 <form action="/words/<%= @word.id %>/definitions" method="post">
   <div class="form-group">
     <label for="definition_name">Definition:</label>
-    <input id="definition_name" name="definition_name" class="form-control" type="text">
+    <input id="definition_name" name="definition_name" class="form-control" type="text" required>
   </div>
-  <button type="submit" name="btn">Add the Definition</button>
+  <button type="submit" class="btn">Add the Definition</button>
 </form>
 
 

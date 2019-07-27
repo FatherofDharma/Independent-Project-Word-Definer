@@ -70,13 +70,13 @@ end
 patch ('/words/:id/definitions/:definition_id') do
   @word = Word.find(params[:id].to_i())
   definition = Definition.find(params[:definition_id].to_i())
-  definition.edit(params[:name], @word.id)
+  definition.edit(params[:redefine], @word.id)
   erb(:word)
 end
 
-delete ('/albums/:id/songs/:song_id') do
+delete ('/words/:id/definitions/:definition_id') do
   definition = Definition.find(params[:definition_id].to_i())
-  definition.delete
+  definition.delete()
   @word = Word.find(params[:id].to_i())
   erb(:word)
 end
