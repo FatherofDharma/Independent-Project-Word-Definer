@@ -22,13 +22,15 @@ _This application is an independent coding project from a Ruby coding class at E
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
 |creates a new word object with an entered name and a unique id| 'bubblefy' | bubblefy, id: 1|
-|returns an empty array where future words will be stored|Word.all|[]|
+|returns an empty array where future words will be stored|Word.all|[ ]|
 |stores word objects in a hash to mock a database, then can return them in an array|New words entered: 'bubblefy', 'uncyorn', 'flutterby'| ['bubblefy', 'uncyorn', 'flutterby']|
 |identifies two Word objects as the same if there attributes match| word1 = Word.new('bubblefy', nil) word2 = Word.new('bubblefy', nil) | true |
 |deletes a word object by id|word1.delete|[word2, word3] (word1 now removed)|
 |sorts words alphabetically by name|'bubblefy', 'uncyorn', 'flutterby'|'bubblefy', 'flutterby', 'uncyorn'|
-||||
-||||
+|creates a definition object and stores it with the parent word|'makes bubbles out of anything'|bubblefy|
+|finds the definition by word id|1|'makes bubbles out of anything'|
+
+
 ## Known Bugs
 
 _No known bugs_
@@ -43,6 +45,7 @@ _Please contact me if you encounter issues with this program, have suggestions, 
 * RubyGems
 * Atom
 * GitHub
+* Heroku
 
 ### License
 _This software is licensed under MIT license._
