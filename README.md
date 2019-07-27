@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application is an independent coding project from a Ruby coding class at Epicodus. This application is intended to demonstrate an understanding of Ruby and basic routing, using Sinatra. This program will be a website for kids to create there own dictionary of words. They will be able to add and/or remove words and definitions._
+_This application is an independent coding project from a Ruby coding class at Epicodus. This application is intended to demonstrate an understanding of Ruby and basic routing, using Sinatra. This program will be a website for kids to create there own dictionary of words. They will be able to add and/or remove words and definitions. To see a live version of the program on Heroku, please click this link: https://still-bayou-70188.herokuapp.com/_
 
 ## Setup/Installation Requirements
 

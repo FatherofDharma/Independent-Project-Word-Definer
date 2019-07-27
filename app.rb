@@ -29,7 +29,6 @@ post ('/words') do
   name = params[:new_word]
   word = Word.new(name, nil)
   word.save()
-
   @words = Word.sort()
   erb(:words)
 end
